@@ -8,7 +8,7 @@ body {
   height: 250px;
 }
 h1 {
-  margin: 200px auto 0 auto;
+  margin: auto;
   font-family: 'Sacramento', cursive;
   font-size: 5.625rem;
   color: #66BFBF;
@@ -34,7 +34,7 @@ line-height: 2;
 }
 
 hr {
-  border: dotted #a1b6cc 6px;
+  border: dotted #A1B6CC 6px;
   border-bottom: none;
   width: 4%;
   margin: 6.25rem auto;
@@ -60,9 +60,7 @@ a:hover {
   margin: 100px 0;
 
 }
-.lower-container {
 
-}
 .bottom-container {
   background-color: #66BFBF;
   padding: 50px 0 20px;
@@ -137,4 +135,52 @@ a:hover {
   background-image: -o-linear-gradient(top, #30e3cb, #2bc4ad);
   background-image: linear-gradient(to bottom, #30e3cb, #2bc4ad);
   text-decoration: none;
+}
+
+
+
+
+
+.waves {
+  position:relative;
+  bottom: 0.625rem;
+  width: 100%;
+  height:15vh;
+  min-height:100px;
+  max-height:150px;
+  text-align:center;
+  background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+  color:#E4F9F5;
+}
+
+
+
+/* Animation */
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% {
+    transform: translate3d(85px,0,0);
+  }
 }
